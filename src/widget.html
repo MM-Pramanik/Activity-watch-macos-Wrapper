@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>AWScreen Widget</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="widget.css" />
+  </head>
+  <body class="widget-body">
+    <main class="widget-shell">
+      <header class="widget-header widget-drag-region">
+        <div class="widget-brand">
+          <span class="brand-mark" aria-hidden="true"
+            ><i></i><i></i><i></i
+          ></span>
+          <span>AWScreen</span>
+        </div>
+        <div class="widget-controls widget-no-drag">
+          <button
+            class="widget-icon-button"
+            id="widget-refresh"
+            title="Refresh ActivityWatch"
+            aria-label="Refresh ActivityWatch"
+          >
+            ↻
+          </button>
+          <button
+            class="widget-icon-button"
+            id="widget-hide"
+            title="Hide widget"
+            aria-label="Hide widget"
+          >
+            ×
+          </button>
+        </div>
+      </header>
+      <section class="widget-content" aria-live="polite">
+        <div class="widget-status">
+          <i id="widget-status-dot"></i
+          ><span id="widget-status-text">Connecting</span
+          ><span id="widget-date"></span>
+        </div>
+        <div class="widget-total" id="widget-total">--</div>
+        <div class="widget-caption">tracked today</div>
+        <div class="widget-divider"></div>
+        <div class="widget-section-title">
+          <span>Top apps</span><span>Today</span>
+        </div>
+        <div class="widget-apps" id="widget-apps"></div>
+        <div class="widget-app-empty" id="widget-app-empty" hidden>
+          No app activity recorded yet
+        </div>
+        <div class="widget-divider widget-category-divider"></div>
+        <div class="widget-section-title">
+          <span>Categories</span><span id="widget-category-count"></span>
+        </div>
+        <div class="widget-categories" id="widget-categories"></div>
+        <div class="widget-empty" id="widget-empty" hidden>
+          No activity recorded yet
+        </div>
+      </section>
+      <footer class="widget-footer widget-no-drag">
+        <button class="widget-open-button" id="widget-open-dashboard">
+          Open dashboard <span aria-hidden="true">↗</span>
+        </button>
+        <span class="widget-updated" id="widget-updated"></span>
+      </footer>
+    </main>
+    <script src="widget.js"></script>
+  </body>
+</html>

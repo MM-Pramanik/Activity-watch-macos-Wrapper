@@ -1,0 +1,240 @@
+.widget-body {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+  background: transparent;
+}
+
+.widget-shell {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  box-shadow: 0 16px 48px rgba(15, 32, 27, 0.2);
+  -webkit-app-region: no-drag;
+}
+
+.widget-header {
+  display: flex;
+  height: 54px;
+  flex: 0 0 54px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--line);
+  -webkit-app-region: drag;
+}
+
+.widget-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: Manrope, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.widget-brand .brand-mark {
+  transform: scale(0.82);
+  transform-origin: left center;
+}
+
+.widget-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.widget-no-drag,
+.widget-no-drag * {
+  -webkit-app-region: no-drag;
+}
+
+.widget-icon-button {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.widget-icon-button:hover {
+  background: var(--surface-soft);
+  color: var(--ink);
+}
+
+.widget-content {
+  flex: 1;
+  overflow: auto;
+  padding: 17px 18px 12px;
+}
+
+.widget-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.widget-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.widget-status i.online {
+  background: var(--accent);
+}
+
+.widget-status #widget-date {
+  margin-left: auto;
+}
+
+.widget-total {
+  margin-top: 14px;
+  font-family: Manrope, sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.widget-caption {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.widget-divider {
+  height: 1px;
+  margin: 17px 0 13px;
+  background: var(--line);
+}
+
+.widget-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-family: Manrope, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.widget-section-title span:last-child {
+  color: var(--muted);
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.widget-categories {
+  display: grid;
+  gap: 12px;
+}
+
+.widget-category {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px 8px;
+  align-items: center;
+}
+
+.widget-category-name {
+  overflow: hidden;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.widget-category-time {
+  color: var(--muted);
+  font-size: 9px;
+  font-variant-numeric: tabular-nums;
+}
+
+.widget-category-track {
+  grid-column: 1 / -1;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--surface-soft);
+}
+
+.widget-category-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+.widget-category:nth-child(3n) .widget-category-fill {
+  background: #d28e53;
+}
+
+.widget-category:nth-child(3n + 2) .widget-category-fill {
+  background: #6b9f84;
+}
+
+.widget-category-divider {
+  margin-top: 15px;
+}
+
+.widget-app-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #d28e53;
+}
+
+.widget-empty {
+  padding: 12px 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.widget-app-empty {
+  padding: 0 0 4px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.widget-footer {
+  display: flex;
+  height: 46px;
+  flex: 0 0 46px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-top: 1px solid var(--line);
+}
+
+.widget-open-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.widget-open-button:hover {
+  color: var(--ink);
+}
+
+.widget-updated {
+  color: var(--muted);
+  font-size: 8px;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "awscreen",
+  "version": "1.0.0",
+  "description": "A local-first ActivityWatch desktop interface",
+  "author": "AWScreen",
+  "main": "electron/main.cjs",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "build": "bash scripts/build-app.sh"
+  },
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.awscreen.app",
+    "productName": "AWScreen",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**/*",
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        "dir"
+      ],
+      "identity": null,
+      "category": "public.app-category.productivity"
+    }
+  }
+}

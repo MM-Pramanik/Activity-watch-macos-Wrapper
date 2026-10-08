@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>AWScreen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="window-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"
+            ><i></i><i></i><i></i></span
+          ><span>AWScreen</span>
+        </div>
+        <div class="sidebar-label">ACTIVITY</div>
+        <nav aria-label="Main navigation">
+          <button class="nav-item active" data-route="today">
+            <span class="nav-icon">◷</span>Today
+          </button>
+          <button class="nav-item" data-route="timeline">
+            <span class="nav-icon">≋</span>Timeline
+          </button>
+          <button class="nav-item" data-route="applications">
+            <span class="nav-icon">▣</span>Applications
+          </button>
+          <button class="nav-item" data-route="websites">
+            <span class="nav-icon">◎</span>Websites &amp; titles
+          </button>
+        </nav>
+        <div class="sidebar-label section-label">ORGANIZE</div>
+        <nav aria-label="Configuration">
+          <button class="nav-item" data-route="categories">
+            <span class="nav-icon">▤</span>Categories
+          </button>
+          <button class="nav-item" data-route="settings">
+            <span class="nav-icon">⚙</span>Settings
+          </button>
+        </nav>
+        <div class="sidebar-bottom">
+          <span class="status-dot" id="sidebar-status-dot"></span>
+          <span id="sidebar-status">Connecting to ActivityWatch</span>
+        </div>
+      </aside>
+      <main class="main-panel">
+        <header class="toolbar">
+          <div class="toolbar-context">
+            <span class="context-kicker">ACTIVITYWATCH</span
+            ><span class="context-value" id="toolbar-status"
+              >Checking local connection</span
+            >
+          </div>
+          <div class="toolbar-actions">
+            <span class="updated-label" id="updated-label"></span>
+            <button
+              class="icon-button widget-toggle"
+              id="widget-toggle"
+              title="Show glance widget"
+              aria-label="Show glance widget"
+            >
+              ◫
+            </button>
+            <button
+              class="icon-button"
+              id="refresh-button"
+              title="Refresh ActivityWatch"
+              aria-label="Refresh ActivityWatch"
+            >
+              ↻
+            </button>
+            <button
+              class="window-button"
+              id="quit-button"
+              title="Quit AWScreen"
+            >
+              Close
+            </button>
+          </div>
+        </header>
+        <section class="page" id="page" aria-live="polite"></section>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
